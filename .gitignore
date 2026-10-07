@@ -3,3 +3,9 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Assignment/submission-only artefacts (kept locally)
+AI_Stock_Market_Assistant.ipynb
+*.ppt
+*.pptx
+*Presentation*.pdf
