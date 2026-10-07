@@ -143,6 +143,9 @@ def retrieve_news_context(store: InMemoryVectorStore | None, question: str, k: i
 analysis_prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a careful equity analyst. Use only the data provided; do not add "
                "facts, events or risks that are not supported by it. "
+               "Never attribute a claim to a news source unless that source's text explicitly "
+               "names the company being analysed; if a source only discusses unnamed stocks or "
+               "the market in general, describe it as general market commentary. "
                "If the news context is thin or irrelevant, say so."),
     ("human", "Stock data:\n{stock_data}\n\nRetrieved news context:\n{news_context}\n\n"
               "User request: {question}\n\n"
